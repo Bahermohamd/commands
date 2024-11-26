@@ -1,0 +1,19 @@
+psexec \\10.20.53.13 c:\'Dynamics Receipt Printer v4'\Contoso.StoreCommercePackagingSample.StoreCommerce.Installer.exe uninstall
+psexec \\10.20.61.11 c:\'Dynamics Receipt Printer v4'\ScaleUnit.Sample.Installer.exe
+
+
+
+pskill  \\10.20.53.13 Microsoft.Dynamics.Commerce.StoreCommerce
+
+
+
+cp .\Receipt.rdlc c:\'Program Files\Microsoft Dynamics 365\10.0\Store Commerce\Extensions\ALOthaim.POSCustomization\HardwareStation\'
+cp *.dll c:\'Program Files\Microsoft Dynamics 365\10.0\Store Commerce\Microsoft\contentFiles\HardwareStation\'
+
+
+foreach ($file in $(Get-ChildItem)){reg import $file.name}
+
+
+
+
+\\10.20.53.11\c$\ProgramData\Microsoft Dynamics 365\10.0\logs\Store Commerce_ALOthaim.POSCustomization_20240812133755

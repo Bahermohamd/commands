@@ -1,0 +1,14 @@
+> netsh advfirewall firewall set rule group="File and Printer Sharing" new enable=Yes
+
+
+or 
+
+
+PS51> Set-NetFirewallRule -DisplayGroup "File And Printer Sharing" -Enabled True -Profile Private
+
+
+or remotly via
+PS51> Invoke-Command -ComputerName PC1, PC2, PC3 -ScriptBlock { Set-NetFirewallRule -DisplayGroup "File And Printer Sharing" -Enabled True -Profile Private }
+
+
+Invoke-Command -ComputerName $(Resolve-DnsName 10.20.53.10).NameHost -ScriptBlock { ping 10.20.0.2 -n 1 }

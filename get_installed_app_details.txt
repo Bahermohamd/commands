@@ -1,0 +1,5 @@
+psexec \\10.20.58.10 powershell -command 'gci "hklm:\software\microsoft\windows\currentversion\uninstall" | foreach { gp $_.PSPath } | select DisplayVersion,InstallDate,DisplayName'
+
+
+
+foreach ($i in (10, 11, 12)) {psexec \\10.20.17.$i powershell -command 'gci "hklm:\software\microsoft\windows\currentversion\uninstall" | foreach { gp $_.PSPath } | select DisplayVersion,InstallDate,DisplayName,UninstallString' | findstr "Commerce"}

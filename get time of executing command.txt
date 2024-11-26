@@ -1,0 +1,1 @@
+(Measure-Command { ping 10.20.53.2 | Out-Default }).ToString()

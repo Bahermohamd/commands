@@ -1,0 +1,4 @@
+sc failure FortiPing reset= 0 actions= restart/60000/restart/120000/restart/180000
+
+
+sc config FortiPing start= auto

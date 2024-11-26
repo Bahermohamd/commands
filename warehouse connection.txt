@@ -1,0 +1,10 @@
+CONNECTION NAME
+	Othaimapp
+ENTRA ID
+	6c7bad96-d347-471b-a800-ef5cb3b19e09
+URL
+	https://othaim-prod.operations.eu.dynamics.com/
+TANNENT ID
+	https://login.windows.net/alothaimegy.onmicrosoft.com
+COMPANY
+	omce

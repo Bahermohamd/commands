@@ -1,0 +1,1 @@
+for /f "tokens=2 delims==" %A in ('wmic.exe printer WHERE default^=TRUE get name /VALUE') do echo %~A

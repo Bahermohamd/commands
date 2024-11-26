@@ -1,0 +1,6 @@
+RetailStoreScaleUnitAsyncClientService
+
+
+sc \\10.20.248.120 query RetailStoreScaleUnitAsyncClientService
+
+

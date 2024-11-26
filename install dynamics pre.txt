@@ -1,0 +1,2 @@
+dotnet-hosting-6.0.24-win.exe /install /quiet /norestart 
+dotnet-sdk-7.0.308-win-x64.exe /install /quiet /norestart 

@@ -1,0 +1,8 @@
+net stop MSSQLSERVER
+net start MSSQLSERVER /f /mSQLCMD
+sqlcmd.exe -E -S . -Q "CREATE LOGIN tmplogin WITH PASSWORD = 'Qwe@123456'; ALTER SERVER ROLE sysadmin ADD MEMBER tmplogin;"
+sqlcmd.exe -E -S . -Q "ALTER LOGIN sa WITH PASSWORD = 'Qwe@123456';"
+net stop MSSQLSERVER
+net start MSSQLSERVER
+
+https://learn.microsoft.com/en-us/sql/database-engine/configure-windows/connect-to-sql-server-when-system-administrators-are-locked-out?view=sql-server-ver16

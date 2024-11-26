@@ -1,0 +1,1 @@
+Write-Host -Object (Get-ChildItem -Path Cert:\LocalMachine\My | Where-Object {$_.Subject -match "$(hostname).othaimegypt.local" -and $_.notafter -like "*2124*"}).thumbprint;

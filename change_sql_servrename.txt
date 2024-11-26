@@ -1,0 +1,11 @@
+SELECT @@SERVERNAME
+
+sp_dropserver 'BR50059-POS01'
+
+
+sp_addserver 'BR50062-POS01', local
+
+--Restart SQL Server 
+
+
+SELECT @@SERVERNAME

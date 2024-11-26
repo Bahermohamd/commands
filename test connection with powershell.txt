@@ -1,0 +1,7 @@
+$pingResult = Test-Connection -ComputerName "10.20.53.70" -Count 1
+
+if ($pingResult.StatusCode -eq 0) {
+    Write-Host "Ping successful"
+} else {
+    Write-Host "Ping failed"
+}

@@ -1,0 +1,1 @@
+Invoke-Command -ComputerName BR50053-SRV -ScriptBlock{$uptime = (Get-Date) - $(Get-CimInstance -ClassName Win32_OperatingSystem).LastBootUpTime; Write-Output "System Uptime: $($uptime.Days) days, $($uptime.Hours) hours, $($uptime.Minutes) minutes, $($uptime.Seconds) seconds"}

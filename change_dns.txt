@@ -1,0 +1,12 @@
+>WMIC NICCONFIG where (IPEnabled=True) GET caption,index,IPAddress,IPEnabled
+
+
+
+
+
+
+
+
+set dns
+
+wmic /node: xxxx nicconfig where (IPEnabled=TRUE) call SetDNSServerSearchOrder("10.20.xx.10", "10.20.0.2", "10.20.0.4")

@@ -1,0 +1,19 @@
+$mypwd = ConvertTo-SecureString -String "1324" -Force -AsPlainText;
+**pfx
+Get-ChildItem -Path Cert:\LocalMachine\My | Where-Object {$_.Subject -match "$(hostname).othaimegypt.local" -and $_.notafter -like "*2124*"} | Export-PfxCertificate -FilePath c:\$(hostname).pfx -Password $mypwd;
+**cer
+Get-ChildItem -Path Cert:\LocalMachine\My | Where-Object {$_.Subject -match "$(hostname).othaimegypt.local" -and $_.notafter -like "*2124*"} | Export-Certificate -Type cer -FilePath c:\$(hostname).cer -Force
+
+
+
+
+
+
+
+***another way
+**pfx
+$mypwd = ConvertTo-SecureString -String "1324" -Force -AsPlainText
+$thumb = Get-ChildItem -Path Cert:\LocalMachine\My | Where-Object {$_.Subject -match "$(hostname).othaimegypt.local" -and $_.notafter -like "*2124*"}
+$thumb | Export-PfxCertificate -FilePath c:\$(hostname).pfx -Password $mypwd
+**cer
+$thumb | Export-Certificate -Type cer -FilePath c:\$(hostname).cer -Force

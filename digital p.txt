@@ -1,0 +1,8 @@
+**new
+wmic /node: 10.20.34.11 product where caption="DigitalPersona U.are.U SDK" get installdate
+**old
+wmic /node: 10.20.43.11 product where caption="DigitalPersona One Touch for Windows SDK 1.4.0.1" get installdate
+
+
+**uninstall
+for %b in (30 25 3 32 41 45) do ( for %p in (11 12 13) do wmic /node: 10.20.%b.%p product where caption="DigitalPersona One Touch for Windows SDK 1.4.0.1" call uninstall /nointeractive)

@@ -1,0 +1,8 @@
+wmic os get Caption
+
+systeminfo
+
+
+
+slmgr /dlv
+slmgr /xpr
